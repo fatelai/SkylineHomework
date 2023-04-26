@@ -1,19 +1,19 @@
-##gRPC 的基本特色與四種傳輸說明與使用時機
+## gRPC 的基本特色與四種傳輸說明與使用時機
 
 
-#1.Simple RPC
+# 1.Simple RPC
 	這種交互模式就是客戶端請求一次，服務端迴應一次，雙方一來一回就算單次通信結束了
 
 	使用時機：同一般的http請求
-#2.Server-side streaming RPC
+# 2.Server-side streaming RPC
 	客戶端發起一個請求到服務端，服務端返回一段連續的streaming Response
 
 	使用時機：用戶需要訂閱資訊，訂閱後服務端會持續回傳資料
-#3.Client-side streaming RPC
+# 3.Client-side streaming RPC
 	客戶端流式是客戶端不斷地向服務端發送streaming，最後由服務端返回一個Response
 
 	使用時機：用戶端需要處理非常大量的資料後傳出，此時可每處理一部分資料就傳送出去，減少瞬時壓力
-#4.與雙向串流（streaming）
+# 4.與雙向串流（streaming）
 	客戶端和服務端可同時向對方發送streaming，同時也可以接收數據
 	
 	使用時機：用戶端和服務端需要非常頻繁的交換數據，例如遊戲的用戶端和服務器端

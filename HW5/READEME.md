@@ -1,3 +1,3 @@
-1. ¥ý¶i¨ìHW4¤¤¦³dockerfileªº¥Ø¿ý¤U
+ï»¿1. å…ˆé€²åˆ°HW4ä¸­æœ‰dockerfileçš„ç›®éŒ„ä¸‹
 2. docker build -t skylinehomework .
 3. docker run --name skylinehomework -p 5000:80 skylinehomework
