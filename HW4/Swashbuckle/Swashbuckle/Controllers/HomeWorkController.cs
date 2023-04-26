@@ -13,6 +13,7 @@ namespace Swashbuckle.Controllers
             _homeworkService = homeworkService;
         }
 
+        [Route("[controller]/{id?}")]
         [HttpGet]
         public List<string> GetData(int? id)
         {
@@ -25,12 +26,22 @@ namespace Swashbuckle.Controllers
             return _homeworkService.AddData(data);
         }
 
+        [Route("[controller]/{id}")]
         [HttpPatch]
         public bool PatchData(int id, string data)
         {
             return _homeworkService.PatchData(id, data);
         }
 
+        [Route("[controller]/{id}")]
+        [HttpPut]
+        public bool PutData(int id, string data)
+        {
+            return _homeworkService.PatchData(id, data);
+        }
+
+
+        [Route("[controller]/{id}")]
         [HttpDelete]
         public bool DeleteData(int id)
         {
