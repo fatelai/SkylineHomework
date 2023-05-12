@@ -29,7 +29,7 @@
 
         public bool DeleteData(int id)
         {
-            if (id < 0 && id >= TestDatas.Count)
+            if (id < 0 || id >= TestDatas.Count)
                 return false;
 
             TestDatas.Remove(TestDatas[id]);
